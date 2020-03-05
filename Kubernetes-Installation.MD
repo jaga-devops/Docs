@@ -110,7 +110,7 @@ kubeadm token create --print-join-command
 ##### Join the cluster
 Use the output from __kubeadm token create__ command in previous step from the master server and run here.
 
-## Verifying the cluster
+## Verifying the cluster IN KUBERNET MASTER AS JAGANNATH USER
 ##### Get Nodes status
 ```sh
 kubectl get nodes
