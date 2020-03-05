@@ -89,13 +89,16 @@ To be able to use kubectl command to connect and interact with the cluster, the 
 
 In my case, the user account is praveen
 ```sh
-mkdir /home/praveen/.kube
+useradd jagannath
+passwd jagannath
+mkdir /home/jagannath/.kube
 cp /etc/kubernetes/admin.conf /home/praveen/.kube/config
-chown -R praveen:praveen /home/praveen/.kube
+chown -R jagannath:jagannath /home/praveen/.kube
 ```
 ##### Deploy Calico network
 This has to be done as the user in the above step (in my case it is __praveen__)
 ```sh
+Go as jagannath user #su - jagannath
 kubectl create -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml
 ```
 
